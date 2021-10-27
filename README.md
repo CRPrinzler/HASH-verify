@@ -1,4 +1,4 @@
-/pypi/pyversions/:packageName
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/3?style=for-the-badge)
 
 # HASH-verify
 Verify file hashes of downloaded files easily in a GUI
