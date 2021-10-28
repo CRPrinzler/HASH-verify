@@ -15,6 +15,7 @@ Supported hash types:
 * MD5
 * SHA1
 * SHA256
+* SHA3_256
 
 ## Running the app
 * Python3
