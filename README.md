@@ -10,6 +10,12 @@ This gui based Python3 app calculates 3 types of file hashes and can evaluate if
 
 This is usable, when you download a file from a webpage. Often you also receive a hash value in order to check that the downloaded file has not been tempered with.
 
+Supported hash types:
+
+* MD5
+* SHA1
+* SHA256
+
 ## Running the app
 * Python3
 * pip3 install PySimpleGUI
