@@ -22,5 +22,9 @@ PySimpleGUI -> https://pysimplegui.readthedocs.io/en/latest/
 
 File Hashing -> https://nitratine.net/blog/post/how-to-hash-files-in-python/
 
+### Additional info on hashlib
+
+https://docs.python.org/3/library/hashlib.html
+
 ## Enjoy and let me know if you like it.
 
