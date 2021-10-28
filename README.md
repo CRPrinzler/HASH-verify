@@ -27,8 +27,11 @@ Supported hash types:
 The LICENSE file in this repository has the following hashes:
 
 SHA1        e204516c6dde9caa1a77ff28cf8a880924040d7b
+
 MD5         55a0fb9781c803bb5bdc3ad02fff2032
+
 SHA256      273b97556cfb88148d6b498f6592a52105fcc684ccbc2fb0de6547b5d8bc6934
+
 SHA3_256    15a8d1e24d6313e00e6aa8819469af4159d3bfbb68ef3183010b714051bd0b30
 
 Use it as a test file.
