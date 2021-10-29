@@ -42,12 +42,12 @@ while True:
                 fb = f.read(BLOCK_SIZE) # Read the next block from the file
         phash=values['-PHASH-']   
         if phash!=file_hash.hexdigest():
-            window.Element('-V-').update("- - -  SHA256 NO MATCH - - -")
-            window.Element('-PHASH-').Update('')
+            window['-V-'].update("- - -  SHA256 NO MATCH - - -")
+            window['-PHASH-'].Update('')
         else:
-            window.Element('-LISTBOX-').update([file_hash.hexdigest()])
-            window.Element('-V-').update("- - - SHA256 VERIFIED!")
-            window.Element('-PHASH-').Update('')
+            window['-LISTBOX-'].update([file_hash.hexdigest()])
+            window['-V-'].update("- - - SHA256 VERIFIED!")
+            window['-PHASH-'].Update('')
             event = ''
             
         
@@ -63,12 +63,12 @@ while True:
                 fb = f.read(BLOCK_SIZE) # Read the next block from the file
         phash=values['-PHASH-']   
         if phash!=file_hash.hexdigest():
-            window.Element('-V1-').update("- - -  SHA1 NO MATCH - - -")
-            window.Element('-PHASH-').Update('')
+            window['-V1-'].update("- - -  SHA1 NO MATCH - - -")
+            window['-PHASH-'].Update('')
         else:
-            window.Element('-LISTBOX2-').update([file_hash.hexdigest()])
-            window.Element('-V1-').update("- - - SHA1 VERIFIED!")
-            window.Element('-PHASH-').Update('')
+            window['-LISTBOX2-'].update([file_hash.hexdigest()])
+            window['-V1-'].update("- - - SHA1 VERIFIED!")
+            window['-PHASH-'].Update('')
             event = ''
         
         file=values["-IN-"]
@@ -82,14 +82,14 @@ while True:
                 fb = f.read(BLOCK_SIZE) # Read the next block from the file
         phash=values['-PHASH-']   
         if phash!=file_hash.hexdigest():
-            window.Element('-V2-').update("- - -  MD5 NO MATCH - - -")
-            window.Element('-PHASH-').Update('')
+            window['-V2-'].update("- - -  MD5 NO MATCH - - -")
+            window['-PHASH-'].Update('')
             
         else:
             
-            window.Element('-LISTBOX3-').update([file_hash.hexdigest()])          
-            window.Element('-V2-').update("- - - MD5 VERIFIED!")    
-            window.Element('-PHASH-').Update('')
+            window['-LISTBOX3-'].update([file_hash.hexdigest()])          
+            window['-V2-'].update("- - - MD5 VERIFIED!")    
+            window['-PHASH-'].Update('')
             event = ''
         
         file=values["-IN-"]
@@ -103,14 +103,14 @@ while True:
                 fb = f.read(BLOCK_SIZE) # Read the next block from the file
         phash=values['-PHASH-']   
         if phash!=file_hash.hexdigest():
-            window.Element('-V3-').update("- - -  SHA3_256 NO MATCH - - -")
-            window.Element('-PHASH-').Update('')
+            window['-V3-'].update("- - -  SHA3_256 NO MATCH - - -")
+            window['-PHASH-'].Update('')
                     
         else:
                     
-            window.Element('-LISTBOX4-').update([file_hash.hexdigest()])          
-            window.Element('-V3-').update("- - - SHA3_256 VERIFIED!")    
-            window.Element('-PHASH-').Update('')
+            window['-LISTBOX4-'].update([file_hash.hexdigest()])          
+            window['-V3-'].update("- - - SHA3_256 VERIFIED!")    
+            window['-PHASH-'].Update('')
             event = ''        
     
     
