@@ -4,17 +4,20 @@ import hashlib
 
 
 
+left_col = sg.Frame('Choose the downloaded file:',[[sg.Input(), sg.FileBrowse(key="-IN-")],[sg.Text("Paste HASH: "), sg.InputText("",key="-PHASH-")],[sg.Button('VERIFY'),  sg.Button('CLOSE APP')]])
 
-layout=[[sg.Titlebar("Verify downloads")],
-          [sg.Text("Choose a file: "), sg.Input(), sg.FileBrowse(key="-IN-")],
-          [sg.Text("Paste HASH: "), sg.InputText("",key="-PHASH-")],
-          [sg.Button('VERIFY'),  sg.Button('CLOSE APP')],
-          [sg.HorizontalSeparator(color='#RRGGBB')],
-          [sg.Text("", size=(80, 1), key='-LISTBOX-'),sg.Text("", key='-V-')],
-          [sg.Text("", size=(80, 1), key='-LISTBOX2-'),sg.Text("", key='-V1-')],
-          [sg.Text("", size=(80, 1), key='-LISTBOX3-'),sg.Text("", key='-V2-')],
-          [sg.Text("", size=(80, 1), key='-LISTBOX4-'),sg.Text("", key='-V3-')],
-          [sg.HorizontalSeparator(color='#RRGGBB')]]
+right_col = sg.Frame('Verification results',[[sg.HorizontalSeparator(color='#RRGGBB')],
+                [sg.Text("", size=(80, 1), key='-LISTBOX-'),sg.Text("", key='-V-')],
+                [sg.Text("", size=(80, 1), key='-LISTBOX2-'),sg.Text("", key='-V1-')],
+                [sg.Text("", size=(80, 1), key='-LISTBOX3-'),sg.Text("", key='-V2-')],
+                [sg.Text("", size=(80, 1), key='-LISTBOX4-'),sg.Text("", key='-V3-')],
+                [sg.HorizontalSeparator(color='#RRGGBB')]])
+
+layout = [[sg.Titlebar('HASH Verify')],
+    [sg.Text('HASH-Verify')],
+        [left_col, sg.VerticalSeparator(), right_col]]
+
+          
 
 window = sg.Window('RHV - RinzlerHashVerify', layout)
 

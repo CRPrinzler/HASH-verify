@@ -3,7 +3,7 @@
 # HASH-verify
 Verify file hashes of downloaded files easily in a GUI
 
-![alt text](https://user-images.githubusercontent.com/11914696/139138144-72e78738-2906-46af-bb4a-f25265193dc0.png)
+![alt text](https://user-images.githubusercontent.com/11914696/139497721-df9494e8-cc57-43f4-b600-6e8062b04542.png)
 
 ## What it does...
 This gui based Python3 app calculates 3 types of file hashes and can evaluate if a hash matches.
