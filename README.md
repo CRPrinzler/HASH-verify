@@ -6,7 +6,7 @@ Verify file hashes of downloaded files easily in a GUI
 ![alt text](https://user-images.githubusercontent.com/11914696/139497721-df9494e8-cc57-43f4-b600-6e8062b04542.png)
 
 ## What it does...
-This gui based Python3 app calculates 3 types of file hashes and can evaluate if a hash matches.
+This gui based Python3 app calculates 5 types of file hashes and can evaluate if a hash matches.
 
 This is usable, when you download a file from a webpage. Often you also receive a hash value in order to check that the downloaded file has not been tempered with.
 
