@@ -18,6 +18,8 @@ Supported hash types:
 * SHA512
 * SHA3_256
 
+A progressbar from 0% - 100% will show the actual status of the triggered verification. This is very useful when bigger files (e.g. 1GB) and verfied or verification is being processed on slower machines.
+
 ## Running the app
 * Python3
 * pip3 install PySimpleGUI
