@@ -3,8 +3,8 @@ import PySimpleGUI as sg
 import hashlib
 
 
-
-left_col = sg.Frame('Choose the downloaded file:',[[sg.Input(), sg.FileBrowse(key="-IN-")],[sg.Text("Paste HASH: "), sg.InputText("",key="-PHASH-")],[sg.Button('VERIFY'),  sg.Button('CLOSE APP')]])
+left_col = sg.Frame('Choose the downloaded file:',[[sg.Input(), sg.FileBrowse(key="-IN-")],[sg.Text("Paste HASH: "), sg.InputText("",key="-PHASH-")],[sg.Button('VERIFY'),
+                                                                                                                                                      sg.Button('CLOSE APP')],[sg.Text("0%"),sg.ProgressBar(100,size=(50,5),style='clam',key="-PBAR-",bar_color=('yellow','black')),sg.Text("100%")]])
 
 right_col = sg.Frame('Verification results',[[sg.HorizontalSeparator(color='#RRGGBB')],
                 [sg.Text("", size=(80, 1), key='-LISTBOX-'),sg.Text("", key='-V-')],
@@ -45,11 +45,13 @@ while True:
         if phash!=file_hash.hexdigest():
             window['-V-'].update("- - -  SHA256 NO MATCH - - -")
             window['-PHASH-'].Update('')
+            window['-PBAR-'].update('20')
         else:
             window['-LISTBOX-'].update([file_hash.hexdigest()])
             window['-V-'].update("- - - SHA256 VERIFIED!")
             window['-PHASH-'].Update('')
             event = ''
+            window['-PBAR-'].update('20')
             
         
         
@@ -66,11 +68,13 @@ while True:
         if phash!=file_hash.hexdigest():
             window['-V1-'].update("- - -  SHA1 NO MATCH - - -")
             window['-PHASH-'].Update('')
+            window['-PBAR-'].update('40')
         else:
             window['-LISTBOX2-'].update([file_hash.hexdigest()])
             window['-V1-'].update("- - - SHA1 VERIFIED!")
             window['-PHASH-'].Update('')
             event = ''
+            window['-PBAR-'].update('40')
         
         file=values["-IN-"]
         BLOCK_SIZE = 65536 # The size of each read from the file
@@ -85,6 +89,7 @@ while True:
         if phash!=file_hash.hexdigest():
             window['-V2-'].update("- - -  MD5 NO MATCH - - -")
             window['-PHASH-'].Update('')
+            window['-PBAR-'].update('60')
             
         else:
             
@@ -92,6 +97,7 @@ while True:
             window['-V2-'].update("- - - MD5 VERIFIED!")    
             window['-PHASH-'].Update('')
             event = ''
+            window['-PBAR-'].update('60')
         
         file=values["-IN-"]
         BLOCK_SIZE = 65536 # The size of each read from the file
@@ -106,13 +112,15 @@ while True:
         if phash!=file_hash.hexdigest():
             window['-V3-'].update("- - -  SHA3_256 NO MATCH - - -")
             window['-PHASH-'].Update('')
+            window['-PBAR-'].update('80')
                     
         else:
                     
             window['-LISTBOX4-'].update([file_hash.hexdigest()])          
             window['-V3-'].update("- - - SHA3_256 VERIFIED!")    
             window['-PHASH-'].Update('')
-            event = ''        
+            event = ''  
+            window['-PBAR-'].update('80')
     
         file=values["-IN-"]
         BLOCK_SIZE = 65536 # The size of each read from the file
@@ -127,13 +135,16 @@ while True:
         if phash!=file_hash.hexdigest():
             window['-V4-'].update("- - -  SHA512 NO MATCH - - -")
             window['-PHASH-'].Update('')
+            window['-PBAR-'].update('100')
                         
         else:
                         
             window['-LISTBOX5-'].update([file_hash.hexdigest()])          
             window['-V4-'].update("- - - SHA512 VERIFIED!")    
             window['-PHASH-'].Update('')
-            event = ''     
+            event = ''
+            window['-PBAR-'].update('100')
+            
     
     if event in (sg.WIN_CLOSED, 'CLOSE APP'):
         break    
